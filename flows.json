@@ -1,0 +1,78 @@
+[
+    {
+        "id": "d466a423db73857c",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "149b85c670c05987"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "149b85c670c05987",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {
+            "module": "node-red-contribe-test-subflow-15-84",
+            "type": "cowsay",
+            "version": "0.0.1",
+            "author": "Author DTT",
+            "desc": "desc",
+            "keywords": "node-red, cowsay",
+            "license": "Apache-2.0"
+        },
+        "color": "#DDAA99"
+    },
+    {
+        "id": "149b85c670c05987",
+        "type": "function",
+        "z": "d466a423db73857c",
+        "name": "function 6",
+        "func": "msg.payload = cowsay2.say(String(msg.payload));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "cowsay2",
+                "module": "cowsay2"
+            }
+        ],
+        "x": 200,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cfbdaf7031c08f10",
+        "type": "subflow:d466a423db73857c",
+        "z": "f429de298ef548d7",
+        "name": "",
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "5c8177733fe84289"
+            ]
+        ]
+    }
+]
